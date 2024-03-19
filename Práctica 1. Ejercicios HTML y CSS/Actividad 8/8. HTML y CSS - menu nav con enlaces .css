@@ -1,0 +1,49 @@
+
+nav ul li{   /*Navegador*/
+    width: 22%;
+    list-style: none;
+    float: left;
+    margin-bottom: 15px;
+    font-size: 23px;
+    border: 1px solid black;
+    text-align: center;
+    padding: 8px;
+    background-color: brown;
+    text-decoration: none;
+}
+
+.menu {
+    text-decoration: none;
+    color: white;
+}
+
+p {
+    clear: both; /* Asegura que el contenido no flote alrededor del menú */
+}
+
+.titulo {                 /*Enlaces*/
+    color: red;
+    margin-left: 25px;
+}
+.titulo a:visited {color: green;}
+
+button {            
+    background-color: blue;
+    color: white;
+    border: 2px solid black;
+}
+
+table {             /*Tabla*/
+    border: 3px solid black;
+    margin-left: 25px;
+}
+table thead {
+    background-color: blueviolet;
+    color: white;
+}
+
+h2 {
+    background-color: brown;
+    color: white;
+    padding: 10px;
+}

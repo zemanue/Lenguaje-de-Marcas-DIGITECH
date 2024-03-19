@@ -1,0 +1,50 @@
+<!-- Definición del DTD (declaración interna: dentro del mismo documento XML)-->
+<!DOCTYPE biblioteca [
+    
+    <!-- Definición del elemento biblioteca. '+' indica que "biblioteca" debe tener uno o más elementos "libro"-->
+    <!ELEMENT biblioteca (libro+)>
+    
+    <!-- Definición del elemento libro, con elementos hijos como titulo, autor, año, editorial, y precio. -->
+        <!-- "Editorial" tiene la cardinalidad '?', lo que significa que es opcional (0 o 1) -->
+    <!ELEMENT libro (titulo, autor, año, editorial?, precio)>
+    
+    <!-- Definición del elemento titulo. #PCDATA indica que el contenido de los elementos es texto plano -->
+    <!ELEMENT titulo (#PCDATA)>
+    
+    <!-- Definición del elemento autor -->
+    <!ELEMENT autor (#PCDATA)>
+    
+    <!-- Definición del elemento año -->
+    <!ELEMENT año (#PCDATA)>
+    
+    <!-- Definición del elemento editorial -->
+    <!ELEMENT editorial (#PCDATA)>
+    
+    <!-- Definición del elemento precio. #CDATA indica que el contenido será una cadena de caracteres -->
+    <!ELEMENT precio (#CDATA)>
+    
+    <!-- ATRIBUTOS -->
+    <!-- Definición del atributo idioma en el elemento libro. El paréntesis representa cada una de las opciones, separadas por '|' -->
+    <!ATTLIST libro idioma (inglés|español|otro) #IMPLIED>
+
+    <!-- Definición del atributo id en el elemento libro -->
+    <!ATTLIST libro id ID #REQUIRED>
+]>
+
+<!-- Ejemplo de documento XML válido -->
+<biblioteca>
+    <libro idioma="español" id= "8498381495">
+        <titulo>El principito</titulo>
+        <autor>Antoine de Saint-Exupéry</autor>
+        <año>1943</año>
+        <editorial>Salamandra</editorial>
+        <precio>15.00</precio>
+    </libro>
+    <libro idioma="inglés" id="7543321726">
+        <titulo>The Catcher in the Rye</titulo>
+        <autor>J.D. Salinger</autor>
+        <año>1951</año>
+        <editorial>Little, Brown and Company</editorial>
+        <precio>12.99</precio>
+    </libro>
+</biblioteca>

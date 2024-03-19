@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>Desarrollos Tecnológicos del Año</title>
+    <id>https://www.sindicaciondamonline.com/</id>
+    <link href="https://www.ejemplo.com/ejercicio-atom" rel="self" />
+    <link href="https://www.ejemplo.com/noticia1" rel="alternate"  />
+    <updated>2023-12-04T09:00:00Z</updated>
+    <author>
+        <name>José Manuel Redondo Conde</name>
+        <email>manureco.97@gmail.com</email>
+    </author>
+    <entry>
+        <title>Desarrollos Tecnológicos del Año</title>
+        <id>https://www.ejemplo.com/noticia1</id>
+        <link href="https://www.ejemplo.com/noticia1" rel="alternate" />
+        <updated>2023-12-04T09:00:00Z</updated>
+        <author>
+            <name>Elon Musk</name>
+        </author>
+        <summary>Repaso de los desarrollos tecnológicos más destacados del año.</summary>
+    </entry>
+</feed>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+        <title>Sindicación de contenidos</title>
+        <link>https://www.sindicaciondamonline.com</link>
+        <description>"Esta es una página sobre sindicación de contenidos</description>
+        <language>es</language>
+        <item>
+            <title>Entrevista con expertos</title>
+            <link>https://www.ejemplo.com/episodio1</link>
+            <guid>https://www.ejemplo.com</guid>
+            <description>Conversación con líderes en la industria sobre temas interesantes</description>
+            <pubDate>03 Dec 2023 00:00:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>

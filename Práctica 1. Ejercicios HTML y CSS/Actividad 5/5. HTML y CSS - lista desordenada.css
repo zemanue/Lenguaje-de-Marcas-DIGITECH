@@ -1,0 +1,10 @@
+a {
+    color: red;  
+    }
+a:visited {color: green;}
+
+button {
+    background-color: blue;
+    color: white;
+    border: 2px solid black;
+}
