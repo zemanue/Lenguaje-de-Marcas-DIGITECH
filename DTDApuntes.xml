@@ -32,6 +32,8 @@
 ]>
 
 <!-- Ejemplo de documento XML válido -->
+<!-- standalone define la existencia de una DTD definida externamente. Al ser definida como "yes" indicamos que es un documento independiente -->
+<?xml version="1.0" encoding="UTF-8" standalone="yes"> 
 <biblioteca>
     <libro idioma="español" id= "8498381495">
         <titulo>El principito</titulo>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8">
+<!DOCTYPE libros [
+<!ELEMENT libro (titulo, autor, anyo)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT anyo (#PCDATA)>
+]>
+
+<libros>
+    <libro>
+        <titulo>Rebelión en la granja</titulo>
+        <autor>George Orwell</autor>
+        <anyo>1945</anyo>
+    </libro>
+    <libro>
+        <titulo>Yo, robot</titulo>
+        <autor>Isaac Asimov</autor>
+        <anyo>1950</anyo>
+    </libro>
+    <libro>
+        <titulo>Carrie</titulo>
+        <autor>Stephen King</autor>
+        <anyo>1974</anyo>
+    </libro>        
+</libros>
