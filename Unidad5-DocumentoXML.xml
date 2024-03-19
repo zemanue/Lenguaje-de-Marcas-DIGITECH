@@ -1,3 +1,14 @@
+<!-- Ejercicio 1: Creación de un Documento XML
+Objetivo: Crear un documento XML que represente información estructurada.
+Pasos:
+1. Utiliza un editor de texto para crear un nuevo archivo con extensión ".xml".
+2. Diseña una estructura XML que represente información sobre libros. Incluye
+elementos como <libro>, <titulo> y <autor>.
+3. Crea al menos tres entradas de libros dentro del documento XML.
+4. Valida el documento XML utilizando un validador en línea para asegurarte de que
+sigue la sintaxis correcta. -->
+
+
 <?xml version="1.0" encoding="UTF-8">
 <!DOCTYPE libros [
 <!ELEMENT libro (titulo, autor, anyo)>
