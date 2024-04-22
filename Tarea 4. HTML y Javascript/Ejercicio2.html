@@ -1,0 +1,48 @@
+<!-- 
+Ejercicio 2: Manipulación de Elementos con JavaScript
+Objetivo: Utilizar JavaScript para manipular elementos HTML.
+Pasos:
+1. Extiende el documento HTML del ejercicio anterior con un botón (<button>).
+2. Agrega un script de JavaScript en la sección <head> o al final del documento.
+3. Utiliza JavaScript para cambiar el contenido de un elemento (por ejemplo, un
+párrafo) cuando se hace clic en el botón.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My webpage</title>
+</head>
+<body>
+    <h1>👋 Hi, I'm @zemanue!</h1>
+    <p>👨‍🏫 I'm currently a Primary School Teacher in my first steps in development.</p>
+    <p>At the moment, I'm focused on learning everything I can about programming, making code as clear as possible with comments in Spanish (teacher issues, I guess…).</p>
+    <ol>
+        <li>🧑‍🎓 Studing DAM (Multi-platform Application Development) at Digitech FP</li>
+        <li>🌱 I'm currently learning Java, SQL, HTML and CSS...</li>
+        <li>💞️ I'm looking to collaborate on: personal projects that challenge me to find possible solutions and learn more in the process</li>
+        <li>🔜 Next goals: JavaScript, Python...</li>
+    </ol>
+    <button onclick="cambiarIdioma()">Cambia el contenido a español</button>
+    <script>
+        function cambiarIdioma() {
+            var titulo = document.getElementsByTagName("h1")[0];
+            titulo.textContent = "¡👋 Hola, soy @zemanue!"
+            var parrafo0 = document.getElementsByTagName("p")[0];
+            parrafo0.textContent = "👨‍🏫 Actualmente soy maestro de Educación Primaria en mis primeros pasos en desarrollo.";
+            var parrafo1 = document.getElementsByTagName("p")[1];
+            parrafo1.textContent = "Por el momento, estoy centrado en aprender todo lo que pueda sobre programación, desarrollando código lo más claro posible con comentarios en español (vicios de maestro, supongo...)";
+            var elementolista0 = document.getElementsByTagName("li")[0];
+            elementolista0.textContent = "🧑‍🎓 Estudiando DAM (Desarrollo de Aplicaciones Multiplataforma) en Digitech FP";
+            var elementolista1 = document.getElementsByTagName("li")[1];
+            elementolista1.textContent = "🌱 Actualmente aprendido Java, SQL, HTML y CSS...";
+            var elementolista2 = document.getElementsByTagName("li")[2];
+            elementolista2.textContent = "💞️ Buscando colaborar en: proyectos personales que me desafíen a encontrar posibles soluciones y aprender más en el proceso";            
+            var elementolista3 = document.getElementsByTagName("li")[3];
+            elementolista3.textContent = "🔜 Próximas metas: JavaScript, Python...";
+        }
+    </script>
+</body>
+</html>
