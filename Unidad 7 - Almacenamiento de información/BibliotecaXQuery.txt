@@ -22,17 +22,55 @@ return count($libros-de-mas-de-100-paginas)
 
 4. Una lista HTML con el título de los libros de la editorial O'Reilly Media
 ordenados por título.
+
+<ul>{
+    for $libro in //libro[editorial = "O'Reilly Media"]
+    order by $libro/titulo
+    return 
+        <li>{ $libro/titulo }</li>
+}</ul>
+
 5. Título y editorial de los libros de 2018 y 2019.
 ○ Los datos de cada libro deben estar dentro de un elemento <libro>.
 ○ El título y la editorial deben ir dentro de los elementos <titulo> y
 <editorial> respectivamente.
+
+for $libro in //libro
+where $libro/año >= 2018 and $libro/año <= 2019
+return 
+    <libro>
+        <titulo>{$libro/titulo}</titulo>
+        <editorial>{$libro/editorial}</editorial>
+    </libro>
+
 6. Título y editorial de los libros con más de un autor.
 ○ Los datos de cada libro deben estar dentro de un elemento <libro>.
 ○ El título y la editorial deben ir dentro de los elementos <titulo> y
 <editorial> respectivamente.
+
+for $libro in //libro
+where count($libro/autor) > 1
+return
+    <libro>
+        <titulo>{$libro/titulo}</titulo>
+        <editorial>{$libro/editorial}</editorial>
+    </libro>
+
 7. Título y año de publicación de los libros que tienen versión electrónica.
 ○ Los datos de cada libro deben estar dentro de un elemento <libro>.
 ○ El título y el año de publicación deben ir dentro de los elementos
 <titulo> y <fecha-publicacion> respectivamente.
+
+for $libro in //libro
+where $libro/edicionElectronica
+return
+    <libro>
+        <titulo>{$libro/titulo}</titulo>
+        <fecha-publicacion>{$libro/@publicacion}</fecha-publicacion>
+    </libro>
+
 8. Título de los libros que no tienen versión electrónica.
 ○ Se debe obtener únicamente los datos, sin etiquetas.
+
+for $libro in /biblioteca/libro[not(edicionElectronica)]
+return $libro/titulo/text()
