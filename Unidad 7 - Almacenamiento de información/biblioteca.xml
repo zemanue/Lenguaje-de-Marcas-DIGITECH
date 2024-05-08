@@ -1,0 +1,51 @@
+<!DOCTYPE biblioteca [
+    <!ELEMENT biblioteca (libros)>
+
+    <!ELEMENT libros (libro+)>
+    
+    <!ELEMENT libro (titulo, autor+, editorial, paginas, edicionElectronica?)>
+    
+    <!ELEMENT titulo (#PCDATA)>
+    
+    <!ELEMENT autor (nombre, apellidos)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT apellidos (#PCDATA)>
+        
+    <!ELEMENT editorial (#PCDATA)>
+    
+    <!ELEMENT paginas (#CDATA)>
+
+    <!ELEMENT edicionElectronica EMPTY>
+    
+    <!ATTLIST libro publicacion CDATA>
+
+    <!ATTLIST libro edicion CDATA #IMPLIED>
+]>
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"> 
+<biblioteca>
+    <libros>
+        <libro publicacion="06-04-1943" edicion= "10">
+            <titulo>El principito</titulo>
+            <autor>
+                <nombre>Antoine</nombre>
+                <apellidos>de Saint-Exupéry</apellidos>
+            </autor>
+            <año>1943</año>
+            <editorial>Salamandra</editorial>
+            <paginas>120</paginas>
+            <edicionElectronica></edicionElectronica>
+        </libro>
+        <libro publicacion="16-06-1951" edicion= "8">
+            <titulo>The Catcher in the Rye</titulo>
+            <autor>
+                <nombre>Jerome David</nombre>
+                <apellidos>Salinger</apellidos>
+            </autor>
+            <año>1951</año>
+            <editorial>Little, Brown and Company</editorial>
+            <paginas>234</paginas>
+            <edicionElectronica></edicionElectronica>
+        </libro>
+    </libros>
+</biblioteca>
