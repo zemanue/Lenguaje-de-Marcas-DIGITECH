@@ -1,0 +1,61 @@
+1. Listar todos los títulos de las películas dirigidas por "Peter Jackson".
+
+
+
+2. Encontrar todas las películas que fueron lanzadas antes de 2000 y tienen una
+duración superior a 150 minutos.
+
+
+
+3. Contar el número total de películas de género "Drama".
+
+
+
+4. Listar todos los directores de películas de ciencia ficción.
+
+
+
+5. Encontrar todas las películas cuyo título contenga la palabra "Matrix" o
+"Forrest".
+
+
+
+6. Calcular el promedio de duración de todas las películas.
+
+
+
+7. Encontrar todas las películas cuyo año de lanzamiento sea igual a 1994 o
+1999.
+
+
+
+8. Listar todas las películas ordenadas por año de lanzamiento de forma
+ascendente.
+
+
+
+9. Verificar si todas las películas tienen una duración mayor a 100 minutos.
+
+
+
+10.Encontrar todas las películas dirigidas por "Lana Wachowski".
+
+
+
+11. Encontrar todas las películas que fueron lanzadas después de 1995 y tienen
+una duración de al menos 2 horas (120 minutos).
+
+
+
+12.Contar el número total de películas de género "Fantasía".
+
+
+
+13.Listar todas las películas dirigidas por "Robert Zemeckis" que no sean de
+género "Ciencia ficción".
+
+
+
+14.Encontrar todas las películas que contienen la palabra "Anillos" en el título.
+
+
