@@ -1,61 +1,88 @@
 1. Listar todos los títulos de las películas dirigidas por "Peter Jackson".
 
-
+for $pelicula in //pelicula
+where $pelicula/director = 'Peter Jackson'
+return $pelicula/titulo
 
 2. Encontrar todas las películas que fueron lanzadas antes de 2000 y tienen una
 duración superior a 150 minutos.
 
-
+for $pelicula in //pelicula
+where $pelicula/año < 2000 and $pelicula/duracion > 150
+return $pelicula/titulo
 
 3. Contar el número total de películas de género "Drama".
 
-
+let $pelicula-drama := //pelicula[genero = 'Drama]
+return count($pelicula-drama)
 
 4. Listar todos los directores de películas de ciencia ficción.
 
-
+for $pelicula in //pelicula
+where $pelicula/genero = 'Ciencia ficción'
+return $pelicula/director
 
 5. Encontrar todas las películas cuyo título contenga la palabra "Matrix" o
 "Forrest".
 
-
+for $pelicula in //pelicula
+where contains($pelicula/titulo, "Matrix") 
+or contains($pelicula/titulo, "Forrest")
+return $pelicula
 
 6. Calcular el promedio de duración de todas las películas.
 
-
+let $promedio-peliculas := avg(//pelicula/duracion)
+return $promedio-peliculas
 
 7. Encontrar todas las películas cuyo año de lanzamiento sea igual a 1994 o
 1999.
 
-
+for $pelicula in //pelicula
+where $pelicula/año=1994 or $pelicula/año=1999
+return $pelicula
 
 8. Listar todas las películas ordenadas por año de lanzamiento de forma
 ascendente.
 
-
+for $pelicula in //pelicula
+order by $pelicula/año
+return $pelicula
 
 9. Verificar si todas las películas tienen una duración mayor a 100 minutos.
 
-
+let $todas-mayor-a-100-minutos := 
+every $pelicula in //pelicula satisfies $pelicula/duracion > 100
+return $todas-mayor-a-100-minutos
 
 10.Encontrar todas las películas dirigidas por "Lana Wachowski".
 
-
+for $pelicula in //pelicula
+where contains($pelicula/director, 'Lana Wachowski')
+return $pelicula
 
 11. Encontrar todas las películas que fueron lanzadas después de 1995 y tienen
 una duración de al menos 2 horas (120 minutos).
 
-
+for $pelicula in //pelicula
+where $pelicula/año > 1995 
+and $pelicula/duracion >= 120
+return $pelicula
 
 12.Contar el número total de películas de género "Fantasía".
 
-
+let $pelicula-fantasia := //pelicula[genero = 'Fantasía']
+return count($pelicula-fantasia)
 
 13.Listar todas las películas dirigidas por "Robert Zemeckis" que no sean de
 género "Ciencia ficción".
 
-
+for $pelicula in //pelicula[director = 'Robert Zemeckis']
+where $pelicula/genero ne 'Ciencia Ficción'
+return $pelicula
 
 14.Encontrar todas las películas que contienen la palabra "Anillos" en el título.
 
-
+for $pelicula in //pelicula
+where contains($pelicula/titulo, 'Anillos')
+return $pelicula
